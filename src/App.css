@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 main{
   padding: 10px;
   max-width: 600px;
@@ -42,4 +46,32 @@ div.post div.texts h2{
   margin: 0;
   font-size: 1.8rem;
 
+}
+
+form.login orm.register{
+
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input{
+  display: block;
+  width: 100%;
+  border: 0;
+  background-color: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button{
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+form h1{
+  text-align: center;
 }

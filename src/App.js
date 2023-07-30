@@ -4,6 +4,8 @@ import './App.css';
 import Post from './post';
 import Header from './header';
 import Layout from './layout';
+import Register from './pages/register';
+import LoginPage from './pages/loginPage';
 
 function App() {
   return (
@@ -31,11 +33,13 @@ function App() {
 
           />
 
-          <Route path={'/login'} element={
+          <Route path={'/login'} element={<LoginPage/>}
 
-            <div>
-              LogGED IN
-            </div>
+          /> 
+
+          <Route path={'/register'} element={
+
+          <Register/>
           }
 
           /> 

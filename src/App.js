@@ -3,19 +3,22 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Post from './post';
 import Header from './header';
+import Layout from './layout';
 
 function App() {
   return (
     
       <Routes>
 
-        <Route
+      <Route path='/' element={<Layout/>}>
+
+      <Route
 
           index element={
 
               <main>
               
-                <Header/>
+                
 
                 <Post/>
                 <Post/>
@@ -26,16 +29,21 @@ function App() {
           }
 
 
-        />
+          />
 
-        <Route path={'/login'} element={
+          <Route path={'/login'} element={
 
             <div>
-              Login
+              LogGED IN
             </div>
-        }
+          }
 
-        />  
+          /> 
+
+
+      </Route>
+
+         
         
       </Routes>
 

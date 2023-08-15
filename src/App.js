@@ -2,54 +2,44 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Post from './post';
-import Header from './header';
+
 import Layout from './layout';
 import Register from './pages/register';
 import LoginPage from './pages/loginPage';
+import { UserContextProvider } from './pages/UserContext';
+import CreatePost from './pages/createPost';
+import IndexPage from './pages/indexPage';
+import PostPage from './pages/postPage';
+import EditPost from './pages/editPost';
 
 function App() {
   return (
-    
-      <Routes>
 
-      <Route path='/' element={<Layout/>}>
+      <UserContextProvider>
+        <Routes>
 
-      <Route
+        <Route path='/' element={<Layout/>}>
 
-          index element={
+        <Route
 
-              <main>
-              
-                
+            index element={<IndexPage/> }  />
 
-                <Post/>
-                <Post/>
-                <Post/>
+            <Route path={'/login'} element={<LoginPage/>} /> 
 
+            <Route path={'/register'} element={ <Register/> } /> 
 
-              </main>
-          }
+            <Route path={'/create'} element={ <CreatePost/> }  /> 
+
+            <Route path={'/post/:id'} element={ <PostPage/> }/> 
+            <Route path={'/edit/:id'} element={ <EditPost/> }/> 
 
 
-          />
+        </Route>
 
-          <Route path={'/login'} element={<LoginPage/>}
-
-          /> 
-
-          <Route path={'/register'} element={
-
-          <Register/>
-          }
-
-          /> 
-
-
-      </Route>
-
-         
-        
-      </Routes>
+          
+          
+        </Routes>
+      </UserContextProvider>
 
     
   );

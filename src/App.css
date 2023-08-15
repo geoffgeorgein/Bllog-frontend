@@ -34,6 +34,10 @@ img{
   max-width: 100%;
 }
 
+button{
+  cursor: pointer;
+}
+
 div.post{
 
   display: grid;
@@ -70,8 +74,53 @@ button{
   background-color: #555;
   border: 2px solid #ddd;
   border-radius: 5px;
+  padding: 5px;
 }
 
-form h1{
+form.login h1{
   text-align: center;
 }
+
+div.post-page div.image{
+  max-height: 200px;
+  display: flex;
+  overflow: hidden;
+
+}
+
+div.post-page div.image img{
+  object-fit: cover;
+  object-position: center center;
+}
+
+div.post-page time{
+  text-align: center;
+  display: block;
+  font-size: 0.7rem;
+  color: #AAA;
+}
+
+div.post-page div.author{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+div.edit-row{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn{
+
+    background-color: #333;
+    display: inline-block;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+

@@ -8,7 +8,7 @@ const Header = () => {
   // console.log("userINfo",setUserInfo);
   console.log("userContxo",UserContext);
   useEffect(() => {
-    fetch('http://localhost:4000/profile', {
+    fetch('https://blog-m8ji.onrender.com/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -21,7 +21,7 @@ const Header = () => {
   
   function logout(){  
 
-    fetch("http://localhost:4000/logout",{ 
+    fetch("https://blog-m8ji.onrender.com/logout",{ 
       credentials:'include',
       method: 'POST',
     })

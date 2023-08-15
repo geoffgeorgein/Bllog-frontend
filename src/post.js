@@ -10,7 +10,7 @@ const Post = ({_id,title,summary,cover,createdAt,author}) => {
 
         <Link to={`/post/${_id}`} >
 
-        <img src={'http://localhost:4000/'+cover} alt=""/>
+        <img src={'https://blog-m8ji.onrender.com/'+cover} alt=""/>
         </Link>
 
         

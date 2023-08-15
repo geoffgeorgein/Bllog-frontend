@@ -11,7 +11,7 @@ const PostPage = () => {
     console.log("postinfo",postInfo)
     useEffect(() => {
 
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://blog-m8ji.onrender.com/post/${id}`)
         .then(response => {
             response.json().then(postInfo=>{
                 setPostInfo(postInfo);
@@ -25,7 +25,7 @@ const PostPage = () => {
 
         <div className='image'>
 
-            <img src={`http://localhost:4000/${postInfo?.cover}`} ></img>
+            <img src={`https://blog-m8ji.onrender.com/${postInfo?.cover}`} ></img>
 
         </div>
 

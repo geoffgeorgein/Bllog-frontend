@@ -28,6 +28,9 @@ const CreatePost = () => {
     const [files, setFiles] = useState('');
     const[redirect,setRedirect] = useState(false);
 
+    const local="http://localhost:4000";
+    const render='https://blog-m8ji.onrender.com';
+
     
     async function newPost(ev){
         
@@ -50,7 +53,7 @@ const CreatePost = () => {
         
         
 
-        const response=await fetch('https://blog-m8ji.onrender.com/post',{
+        const response=await fetch(local+'/post',{
             method: 'POST',
             body:data,
             credentials:'include'

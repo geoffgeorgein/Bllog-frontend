@@ -10,13 +10,16 @@ const LoginPage = () => {
 //   const [redirect,setRedirect] = useState(false);
   const {setUserInfo} = useContext(UserContext);
 
+  const local="http://localhost:4000";
+  const render='https://blog-m8ji.onrender.com';
+
   async function login(ev) {
     ev.preventDefault();
-    const response = await fetch('https://blog-m8ji.onrender.com/login', {
+    const response = await fetch(local+'/login', {
       method: 'POST',
       body: JSON.stringify({username, password}),
       headers: {'Content-Type':'application/json'},
-      credentials:'include'
+      // credentials:'include'
       
     });
     if (response.ok) {

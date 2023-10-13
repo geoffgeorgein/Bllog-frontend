@@ -3,6 +3,8 @@ import {formatISO9075} from "date-fns";
 import {Link} from "react-router-dom";
 
 const Post = ({_id,title,summary,cover,createdAt,author}) => {
+
+  const local="http://localhost:4000/";
   return (
     <div className="post">
         
@@ -10,7 +12,7 @@ const Post = ({_id,title,summary,cover,createdAt,author}) => {
 
         <Link to={`/post/${_id}`} >
 
-        <img src={'https://blog-m8ji.onrender.com/'+cover} alt=""/>
+        <img src={local+cover} alt=""/>
         </Link>
 
         

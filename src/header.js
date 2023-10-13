@@ -7,10 +7,11 @@ const Header = () => {
   const {setUserInfo,userInfo} = useContext(UserContext);
   // console.log("userINfo",setUserInfo);
   console.log("userContxo",UserContext);
+  const local="http://localhost:4000/profile";
+  const render='https://blog-m8ji.onrender.com/profile';
+
   useEffect(() => {
-    fetch('https://blog-m8ji.onrender.com/profile', {
-      credentials: 'include',
-    }).then(response => {
+    fetch(local).then(response => {
       response.json().then(userInfo => {
         setUserInfo(userInfo);
         console.log("Userinf",userInfo); 
@@ -21,8 +22,8 @@ const Header = () => {
   
   function logout(){  
 
-    fetch("https://blog-m8ji.onrender.com/logout",{ 
-      credentials:'include',
+    fetch(local+"/logout",{ 
+      // credentials:'include',
       method: 'POST',
     })
 
@@ -31,7 +32,7 @@ const Header = () => {
   
 
   const username=userInfo?.username;
-  console.log("USerINf",userInfo);
+  // console.log("USerINf",userInfo);
   return (
     <header>
             <a href="/" className="logo">My Blog</a>

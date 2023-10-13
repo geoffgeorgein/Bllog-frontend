@@ -8,10 +8,13 @@ const PostPage = () => {
     const {id}=useParams();
     const [postInfo,setPostInfo]=useState();
     const {userInfo} = useContext(UserContext);
-    console.log("postinfo",postInfo)
+    console.log("postinfo",postInfo);
+
+    const local="http://localhost:4000";
+    const render='https://blog-m8ji.onrender.com';
     useEffect(() => {
 
-        fetch(`https://blog-m8ji.onrender.com/post/${id}`)
+        fetch(local+`/post/${id}`)
         .then(response => {
             response.json().then(postInfo=>{
                 setPostInfo(postInfo);

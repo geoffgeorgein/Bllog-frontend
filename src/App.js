@@ -18,7 +18,7 @@ function App() {
       <UserContextProvider>
         <Routes>
 
-        <Route path='/' element={<Layout/>}>
+        <Route path='/' element={<Layout  />}>
 
         <Route
 

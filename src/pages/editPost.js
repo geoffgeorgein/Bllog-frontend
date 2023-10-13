@@ -11,9 +11,13 @@ const EditPost = () => {
     const [files, setFiles] = useState('');
     const [redirect,setRedirect] = useState(false);
 
+    const local="http://localhost:4000/";
+    const render='https://blog-m8ji.onrender.com';
+
+    console.log('id',id);
 
     useEffect(() => {
-        fetch('https://blog-m8ji.onrender.com/'+id)
+        fetch(`https://blog-m8ji.onrender.com/post/${id}`)
           .then(response => {
             response.json().then(postInfo => {
               setTitle(postInfo.title);

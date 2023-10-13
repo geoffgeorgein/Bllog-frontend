@@ -26,6 +26,7 @@ const Header = () => {
       // credentials:'include',
       method: 'POST',
     })
+    localStorage.clear();
 
     setUserInfo(null);
   }

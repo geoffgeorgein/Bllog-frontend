@@ -27,6 +27,7 @@ const LoginPage = () => {
       response.json().then(userInfo=>{
 
         setUserInfo(userInfo);
+        localStorage.setItem("Profile", JSON.stringify({ userInfo }));
         setRedirect(true);
       })
         

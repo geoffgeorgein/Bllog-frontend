@@ -15,6 +15,7 @@ const Header = () => {
       response.json().then(userInfo => {
         setUserInfo(userInfo);
         console.log("Userinf",userInfo); 
+        
         // state not updating
       });
     });
@@ -30,10 +31,12 @@ const Header = () => {
 
     setUserInfo(null);
   }
-  
 
-  const username=userInfo?.username;
-  // console.log("USerINf",userInfo);
+  const myObj = JSON.parse(localStorage.getItem("Profile"));
+  console.log("profilename",myObj);
+
+  const username=userInfo?.username || myObj?.userInfo?.username;
+   console.log("USername1",username);
   return (
     <header>
             <a href="/" className="logo">My Blog</a>
